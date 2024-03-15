@@ -26,8 +26,12 @@ const patientSchema = mongoose.Schema(
       },
     },
   },
-  { timestamps: true }
+  {
+    timestamp: true,
+    collection: "PatientRegistration",
+  }
 );
 
 const Patient = mongoose.model("Patient", patientSchema);
+
 module.exports = Patient;
